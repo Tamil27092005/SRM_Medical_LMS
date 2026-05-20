@@ -52,14 +52,4 @@ SRM eLEARN is built as a zero-build, dependency-free HTML file.
 
 The application relies on external LLM and TTS providers. Currently, API routing is handled client-side with a robust fallback and rotation strategy embedded in the `AI_CONFIG` object.
 
-> **⚠️ Security Warning for Production:** > In a live production environment, **never expose raw API keys** in the client-side JavaScript. You must extract the Groq and Sarvam AI keys from the `AI_CONFIG` object and route these requests through a secure backend proxy server.
-
-### Modifying API Keys
-To update the keys for local testing, locate the `AI_CONFIG` object in the `<script>` tag:
-```javascript
-const AI_CONFIG = {
-  model: "openai/gpt-oss-120b",
-  keys: [ { id: "Key 1", val: "YOUR_GROQ_API_KEY", errors: 0, limited: false }, ... ],
-  sarvam_keys: [ { id: "S-Key 1", val: "YOUR_SARVAM_API_KEY", errors: 0 }, ... ],
-  ...
-};
+Live Link : https://6a0dfe4494ed0f46de164280--exquisite-pudding-54106c.netlify.app/
